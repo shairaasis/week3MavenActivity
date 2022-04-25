@@ -1,29 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Person.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">myfirstproject</a> &gt; <a href="index.source.html" class="el_package">com.Person</a> &gt; <span class="el_source">Person.java</span></div><h1>Person.java</h1><pre class="source lang-java linenums">package com.Person;
+import java.util.Scanner;
+import com.Vehicle.Vehicle;
 
 public class Person {
     String firstName, lastName;
+    private String location;
+    String travel_vehicle;
     int age;
 
-<span class="nc" id="L7">    public Person(String firstName, String lastName, int age){</span>
-<span class="nc" id="L8">        this.firstName = firstName;</span>
-<span class="nc" id="L9">        this.lastName = lastName;</span>
-<span class="nc" id="L10">        this.age = age;</span>
-<span class="nc" id="L11">    }</span>
+<span class="nc" id="L11">    public Person(String firstName, String lastName, int age){</span>
+<span class="nc" id="L12">        this.firstName = firstName;</span>
+<span class="nc" id="L13">        this.lastName = lastName;</span>
+<span class="nc" id="L14">        this.age = age;</span>
+<span class="nc" id="L15">    }</span>
 
-    public static void displayPerson(String firstName, String lastName, int age) {
-<span class="nc" id="L14">        System.out.println(&quot;First Name: &quot;+ firstName + &quot; Last Name: &quot; +lastName + &quot; Age: &quot; + age);</span>
-        
-<span class="nc" id="L16">    }</span>
 
-    public static void displayPerson(String firstName, String lastName, int age, int year) {
-<span class="nc" id="L19">        System.out.println(&quot;First Name: &quot;+ firstName + &quot; Last Name: &quot; +lastName + &quot; Age: &quot; + age + &quot; Year:  &quot; + year);</span>
-        
-<span class="nc" id="L21">    }</span>
 
-    public static void displayPerson(String firstName, String lastName, int age, String degreeLevel) {
-<span class="nc" id="L24">        System.out.println(&quot;First Name: &quot;+ firstName + &quot; Last Name: &quot; +lastName + &quot; Age: &quot; + age + &quot; Degree Level:  &quot; + degreeLevel);</span>
+<span class="nc" id="L19">    public Person(String firstName, String lastName, int age, String location){</span>
+<span class="nc" id="L20">        this.firstName = firstName;</span>
+<span class="nc" id="L21">        this.lastName = lastName;</span>
+<span class="nc" id="L22">        this.age = age;</span>
+<span class="nc" id="L23">        this.location = location;</span>
+<span class="nc" id="L24">        this.travel_vehicle = &quot;No Vehicle&quot;;</span>
         
 <span class="nc" id="L26">    }</span>
+
+    public void travel(Vehicle vehicleName){
+<span class="nc" id="L29">        System.out.println(&quot;The person &quot;+ getFirstName() + &quot; &quot; + getLastName()+&quot; is currently in &quot;+getLocation() +&quot;.&quot;);</span>
+<span class="nc" id="L30">        Scanner sc = new Scanner(System.in);  </span>
+<span class="nc" id="L31">        System.out.print(&quot;Enter the location you want to travel to: &quot;);</span>
+<span class="nc" id="L32">        String newLocation = sc.nextLine();</span>
+<span class="nc" id="L33">        System.out.print(&quot;Enter the distance(km) from your current location to destination: &quot;);</span>
+<span class="nc" id="L34">        double distance = sc.nextDouble();</span>
+
+<span class="nc" id="L36">        double gasUsed = distance / vehicleName.getGasConsumption();</span>
+
+<span class="nc bnc" id="L38" title="All 2 branches missed.">        if(gasUsed &lt; vehicleName.getGas()){</span>
+<span class="nc" id="L39">            setLocation(newLocation);</span>
+<span class="nc" id="L40">            setTravel_vehicle(vehicleName.getVehicleName());</span>
+<span class="nc" id="L41">            vehicleName.setGas(vehicleName.getGas() - gasUsed);</span>
+<span class="nc" id="L42">            System.out.println(&quot;The person &quot;+ getFirstName() + &quot; &quot; + getLastName()+&quot; travelled to &quot;+getLocation() +&quot; using &quot; +getTravel_vehicle());</span>
+<span class="nc" id="L43">            System.out.println(&quot;The remaining gas after travelling is &quot; + vehicleName.getGas() + &quot; liters.&quot;);</span>
+
+
+<span class="nc" id="L46">        }</span>
+        
+        else{
+<span class="nc" id="L49">            System.out.println(&quot;Cannot travel.&quot;);</span>
+<span class="nc" id="L50">            System.out.println(&quot;Your vehicle &quot; +vehicleName.getVehicleName() + &quot; does not have enough gas.&quot;);</span>
+
+        }
+<span class="nc" id="L53">        System.out.println(&quot;-------------------------------------------------------------------------------------------------------&quot;);</span>
+
+<span class="nc" id="L55">    }</span>
+
+    public void travel(){
+<span class="nc" id="L58">        System.out.println(&quot;The person &quot;+ getFirstName() + &quot; &quot; + getLastName()+&quot; is currently in &quot;+getLocation() +&quot;.&quot;);</span>
+<span class="nc" id="L59">        Scanner sc = new Scanner(System.in);  </span>
+<span class="nc" id="L60">        System.out.print(&quot;Enter the location you want to travel to: &quot;);</span>
+<span class="nc" id="L61">        String newLocation = sc.nextLine();</span>
+<span class="nc" id="L62">        setLocation(newLocation);</span>
+<span class="nc" id="L63">        System.out.print(&quot;Enter the distance(km) from your current location to destination: &quot;);</span>
+<span class="nc" id="L64">        double distance = sc.nextDouble();</span>
+<span class="nc" id="L65">        System.out.println(&quot;The person &quot;+ getFirstName() + &quot; &quot; + getLastName()+&quot; travelled to &quot;+getLocation() +&quot; using &quot; +getTravel_vehicle());</span>
+<span class="nc" id="L66">        System.out.println(&quot;-------------------------------------------------------------------------------------------------------&quot;);</span>
+<span class="nc" id="L67">    }</span>
+
+
+    public static void displayPerson(String firstName, String lastName, int age) {
+<span class="nc" id="L71">        System.out.println(&quot;First Name: &quot;+ firstName + &quot; Last Name: &quot; +lastName + &quot; Age: &quot; + age);</span>
+        
+<span class="nc" id="L73">    }</span>
+
+    public static void displayPerson(String firstName, String lastName, int age, int year) {
+<span class="nc" id="L76">        System.out.println(&quot;First Name: &quot;+ firstName + &quot; Last Name: &quot; +lastName + &quot; Age: &quot; + age + &quot; Year:  &quot; + year);</span>
+        
+<span class="nc" id="L78">    }</span>
+
+    public static void displayPerson(String firstName, String lastName, int age, String degreeLevel) {
+<span class="nc" id="L81">        System.out.println(&quot;First Name: &quot;+ firstName + &quot; Last Name: &quot; +lastName + &quot; Age: &quot; + age + &quot; Degree Level:  &quot; + degreeLevel);</span>
+        
+<span class="nc" id="L83">    }</span>
+
+    public String getFirstName() {
+<span class="nc" id="L86">        return firstName;</span>
+    }
+
+    public void setFirstName(String firstName) {
+<span class="nc" id="L90">        this.firstName = firstName;</span>
+<span class="nc" id="L91">    }</span>
+
+    public String getLastName() {
+<span class="nc" id="L94">        return lastName;</span>
+    }
+
+    public void setLastName(String lastName) {
+<span class="nc" id="L98">        this.lastName = lastName;</span>
+<span class="nc" id="L99">    }</span>
+
+    public String getLocation() {
+<span class="nc" id="L102">        return location;</span>
+    }
+
+    public void setLocation(String location) {
+<span class="nc" id="L106">        this.location = location;</span>
+<span class="nc" id="L107">    }</span>
+
+    public String getTravel_vehicle() {
+<span class="nc" id="L110">        return travel_vehicle;</span>
+    }
+
+    public void setTravel_vehicle(String travel_vehicle) {
+<span class="nc" id="L114">        this.travel_vehicle = travel_vehicle;</span>
+<span class="nc" id="L115">    }</span>
+
+    public int getAge() {
+<span class="nc" id="L118">        return age;</span>
+    }
+
+    public void setAge(int age) {
+<span class="nc" id="L122">        this.age = age;</span>
+<span class="nc" id="L123">    }</span>
+
+    
+
+
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

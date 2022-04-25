@@ -1,8 +1,8 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-myfirstproject,com.Vehicle,Vehicle,49,0,0,0,8,0,3,0,3,0
-myfirstproject,com.Vehicle,Car,8,0,0,0,3,0,1,0,1,0
-myfirstproject,com.Vehicle,Bike,8,0,0,0,3,0,1,0,1,0
-myfirstproject,com.Person,Student,9,0,0,0,3,0,1,0,1,0
-myfirstproject,com.Person,Teacher,9,0,0,0,3,0,1,0,1,0
-myfirstproject,com.Person,Person,77,0,0,0,11,0,4,0,4,0
-myfirstproject,com.firstmavenproject,App,76,0,8,0,22,0,5,0,1,0
+myfirstproject,com.Vehicle,Vehicle,100,0,0,0,30,0,14,0,14,0
+myfirstproject,com.Vehicle,Car,26,0,0,0,9,0,4,0,4,0
+myfirstproject,com.Vehicle,Bike,26,0,0,0,9,0,4,0,4,0
+myfirstproject,com.Person,Student,29,0,0,0,10,0,4,0,4,0
+myfirstproject,com.Person,Teacher,22,0,0,0,7,0,2,0,2,0
+myfirstproject,com.Person,Person,317,0,2,0,61,0,18,0,17,0
+myfirstproject,com.firstmavenproject,App,148,0,8,0,35,0,5,0,1,0

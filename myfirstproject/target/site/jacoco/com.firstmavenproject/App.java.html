@@ -8,39 +8,76 @@ import com.Vehicle.*;
 public final class App {
     private App() {
     }
+
     /**
      * Says hello to the world.
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
-<span class="nc" id="L16">        Scanner sc = new Scanner(System.in);</span>
+<span class="nc" id="L17">        Scanner sc = new Scanner(System.in);</span>
+        
         int choice;
         
         do{
-<span class="nc" id="L20">        System.out.println(&quot;\n\n--------------------------------------------------------------------&quot;);</span>
-<span class="nc" id="L21">        System.out.println(&quot;What would you like to do?&quot;);</span>
-<span class="nc" id="L22">        System.out.println(&quot;0.Exit      1.Display persons       2.Display vehicles&quot;);</span>
-<span class="nc" id="L23">        choice = sc.nextInt();</span>
-<span class="nc" id="L24">        sc.nextLine();</span>
-<span class="nc bnc" id="L25" title="All 2 branches missed.">        if(choice==1){</span>
-<span class="nc" id="L26">        System.out.println(&quot;\n--Normal Person--&quot;);</span>
-<span class="nc" id="L27">        Person.displayPerson(&quot;Shaira&quot;, &quot;Asis&quot;, 22);</span>
-<span class="nc" id="L28">        System.out.println(&quot;\n--Student--&quot;);</span>
-<span class="nc" id="L29">        Student.displayPerson(&quot;Shaira&quot;, &quot;Asis&quot;, 22, 4);</span>
-<span class="nc" id="L30">        System.out.println(&quot;\n--Teacher--&quot;);</span>
-<span class="nc" id="L31">        Teacher.displayPerson(&quot;Shaira&quot;, &quot;Asis&quot;, 22, &quot;Bachelor's&quot;);</span>
-        }
-<span class="nc bnc" id="L33" title="All 2 branches missed.">        else if(choice==2){</span>
-<span class="nc" id="L34">        System.out.println(&quot;\n--Car--&quot;);</span>
-<span class="nc" id="L35">        Car.displayVehicle(&quot;Four-stroke engine&quot;, 4, 35.5);</span>
-<span class="nc" id="L36">        System.out.println(&quot;\n--Bike--&quot;);</span>
-<span class="nc" id="L37">        Bike.displayVehicle(&quot;Electric&quot;, 2, 60);</span>
-        }
-    }
-<span class="nc bnc" id="L40" title="All 4 branches missed.">    while(choice==1 || choice==2);</span>
-<span class="nc" id="L41">    System.out.println(&quot;\n\n--END OF PROGRAM--&quot;);</span>
-<span class="nc" id="L42">        sc.close();</span>
+<span class="nc" id="L22">        System.out.println(&quot;\n\n--------------------------------------------------------------------&quot;);</span>
+<span class="nc" id="L23">        System.out.println(&quot;What would you like to do?&quot;);</span>
+<span class="nc" id="L24">        System.out.println(&quot;0.Exit      1.Display persons       2.Display vehicles&quot;);</span>
+<span class="nc" id="L25">        choice = sc.nextInt();</span>
+<span class="nc" id="L26">        sc.nextLine();</span>
 
-<span class="nc" id="L44">    }</span>
+<span class="nc bnc" id="L28" title="All 2 branches missed.">        if(choice==1){</span>
+
+<span class="nc" id="L30">        System.out.println(&quot;\n--Normal Person--&quot;);</span>
+<span class="nc" id="L31">        Person.displayPerson(&quot;Shaira&quot;, &quot;Asis&quot;, 22);</span>
+
+<span class="nc" id="L33">        System.out.println(&quot;\n--Student--&quot;);</span>
+<span class="nc" id="L34">        Student.displayPerson(&quot;Jaya&quot;, &quot;Jones&quot;, 24, 4);</span>
+
+<span class="nc" id="L36">        System.out.println(&quot;\n--Teacher--&quot;);</span>
+<span class="nc" id="L37">        Teacher.displayPerson(&quot;Jane&quot;, &quot;Doe&quot;, 40, &quot;Master's&quot;);</span>
+
+<span class="nc" id="L39">        }</span>
+
+<span class="nc bnc" id="L41" title="All 2 branches missed.">        else if(choice==2){</span>
+
+<span class="nc" id="L43">        System.out.println(&quot;\n--Car--&quot;);</span>
+<span class="nc" id="L44">        Car.displayVehicle(&quot;Four-stroke engine&quot;, 4, 35.5);</span>
+
+<span class="nc" id="L46">        System.out.println(&quot;\n--Bike--&quot;);</span>
+<span class="nc" id="L47">        Bike.displayVehicle(&quot;Electric&quot;, 2, 60);</span>
+        }
+
+        
+    }
+
+<span class="nc bnc" id="L53" title="All 4 branches missed.">    while(choice==1 || choice==2);</span>
+<span class="nc" id="L54">    System.out.println(&quot;\n\n--END OF ACTIVITY 1--&quot;);</span>
+
+
+     
+        //Activity 2
+<span class="nc" id="L59">        System.out.println(&quot;\n--------------------------------------------------------------------------------------------------------------------&quot;);</span>
+<span class="nc" id="L60">        System.out.println(&quot;\n--Activity 2--&quot;);</span>
+<span class="nc" id="L61">        Car fordRanger = new Car(&quot;Ford Ranger&quot;, 50, 10, &quot;4 Stroke Engine&quot;, 4, 35.5);</span>
+<span class="nc" id="L62">        Bike ducati = new Bike(&quot;Ducati&quot;, 15, 5.5, &quot;V-twin four-stroke&quot;, 2, 80);</span>
+ 
+ 
+<span class="nc" id="L65">        Person shaira = new Person(&quot;Shaira&quot;, &quot;Asis&quot;, 22, &quot;Dulag&quot;);</span>
+
+<span class="nc" id="L67">        Student jaya = new Student(&quot;Jaya&quot;, &quot;Jones&quot;, 12, 1, &quot;Palo&quot;);</span>
+
+<span class="nc" id="L69">        Student student = new Student(&quot;Student&quot;, &quot;Person&quot;, 25, 2, &quot;Tanauan&quot;);</span>
+
+<span class="nc" id="L71">        Teacher teacher = new Teacher(&quot;Teacher&quot;, &quot;Person&quot;, 40, &quot;Master's&quot;, &quot;Leyte&quot;);</span>
+
+<span class="nc" id="L73">        shaira.travel(ducati);</span>
+<span class="nc" id="L74">        jaya.travel(fordRanger);</span>
+<span class="nc" id="L75">        student.travel();</span>
+<span class="nc" id="L76">        teacher.travel(ducati);</span>
+
+<span class="nc" id="L78">        sc.close();</span>
+
+
+<span class="nc" id="L81">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -58,24 +58,25 @@ public final class App {
         //Activity 2
         System.out.println("\n--------------------------------------------------------------------------------------------------------------------");
         System.out.println("\n--Activity 2--");
-        Car car1 = new Car("Ford Ranger", 50, 10, "4 Stroke Engine", 4, 35.5);
-        Bike bike1 = new Bike("Ducati", 15, 5.5, "V-twin four-stroke", 2, 80);
+        Car fordRanger = new Car("Ford Ranger", 50, 10, "4 Stroke Engine", 4, 35.5);
+        Bike ducati = new Bike("Ducati", 15, 5.5, "V-twin four-stroke", 2, 80);
  
  
-        Student student1 = new Student("Shaira", "Asis", 22, 4, "Tacloban", car1.getVehicleName());
+        Person shaira = new Person("Shaira", "Asis", 22, "Dulag");
 
-        Student student2 = new Student("Jaya", "Jones", 12, 1, "Palo", bike1.getVehicleName());
+        Student jaya = new Student("Jaya", "Jones", 12, 1, "Palo");
 
-        Student student3 = new Student("Student", "Person", 25, 2, "Cebu");
+        Student student = new Student("Student", "Person", 25, 2, "Tanauan");
 
-        Teacher teacher1 = new Teacher("Teacher", "Person", 40, "Master's", "Leyte", bike1.getVehicleName());
+        Teacher teacher = new Teacher("Teacher", "Person", 40, "Master's", "Leyte");
 
-        student1.travel(car1);
-        student2.travel(bike1);
-        student3.travel();
-        teacher1.travel(bike1);
+        shaira.travel(ducati);
+        jaya.travel(fordRanger);
+        student.travel();
+        teacher.travel(ducati);
 
         sc.close();
+
 
     }
 }

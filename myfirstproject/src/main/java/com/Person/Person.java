@@ -14,14 +14,7 @@ public class Person {
         this.age = age;
     }
 
-    public Person(String firstName, String lastName, int age, String location, String travel_vehicle){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.location = location;
-        this.travel_vehicle = travel_vehicle;
-        
-    }
+
 
     public Person(String firstName, String lastName, int age, String location){
         this.firstName = firstName;
@@ -47,6 +40,7 @@ public class Person {
             setTravel_vehicle(vehicleName.getVehicleName());
             vehicleName.setGas(vehicleName.getGas() - gasUsed);
             System.out.println("The person "+ getFirstName() + " " + getLastName()+" travelled to "+getLocation() +" using " +getTravel_vehicle());
+            System.out.println("The remaining gas after travelling is " + vehicleName.getGas() + " liters.");
 
 
         }

@@ -3,24 +3,74 @@
 public class Vehicle {
 
     
-    String engineType;
+    String engineType, vehicleName;
+    double gas, gasConsumption;
     int no_Wheels;
 
-<span class="nc" id="L9">    public Vehicle(String engineType, int no_Wheels){</span>
-<span class="nc" id="L10">        this.engineType = engineType;</span>
-<span class="nc" id="L11">        this.no_Wheels = no_Wheels;</span>
-<span class="nc" id="L12">    }</span>
+<span class="nc" id="L10">    public Vehicle(String engineType, int no_Wheels){</span>
+<span class="nc" id="L11">        this.engineType = engineType;</span>
+<span class="nc" id="L12">        this.no_Wheels = no_Wheels;</span>
+<span class="nc" id="L13">    }</span>
+
+<span class="nc" id="L15">    public Vehicle(String vehicleName, double gas, double gasConsumption, String engineType, int no_Wheels){</span>
+<span class="nc" id="L16">        this.vehicleName=vehicleName;</span>
+<span class="nc" id="L17">        this.gas=gas;</span>
+<span class="nc" id="L18">        this.gasConsumption=gasConsumption;</span>
+<span class="nc" id="L19">        this.engineType = engineType;</span>
+<span class="nc" id="L20">        this.no_Wheels = no_Wheels;</span>
+
+<span class="nc" id="L22">    }</span>
 
 
     public static void displayVehicle(String engineType, int no_Wheels, double storageCapacity) {
-<span class="nc" id="L16">        System.out.println(&quot;Engine Type : &quot;+ engineType + &quot;\nNumber of Wheels    : &quot; +no_Wheels + &quot;\nStorage Capacity      : &quot; + storageCapacity);</span>
+<span class="nc" id="L26">        System.out.println(&quot;Engine Type : &quot;+ engineType + &quot;\nNumber of Wheels    : &quot; +no_Wheels + &quot;\nStorage Capacity      : &quot; + storageCapacity);</span>
         
-<span class="nc" id="L18">    }</span>
+<span class="nc" id="L28">    }</span>
 
     public static void displayVehicle(String engineType, int no_Wheels, int wheelie_power) {
-<span class="nc" id="L21">        System.out.println(&quot;Engine Type :   &quot;+ engineType + &quot;\nNumber of Wheels     : &quot; +no_Wheels +  &quot;\nWheelie Power    : &quot; + wheelie_power +&quot;\n&quot;);</span>
+<span class="nc" id="L31">        System.out.println(&quot;Engine Type :   &quot;+ engineType + &quot;\nNumber of Wheels     : &quot; +no_Wheels +  &quot;\nWheelie Power    : &quot; + wheelie_power +&quot;\n&quot;);</span>
         
-<span class="nc" id="L23">    }</span>
+<span class="nc" id="L33">    }</span>
+
+    public String getEngineType() {
+<span class="nc" id="L36">        return engineType;</span>
+    }
+
+    public void setEngineType(String engineType) {
+<span class="nc" id="L40">        this.engineType = engineType;</span>
+<span class="nc" id="L41">    }</span>
+
+    public String getVehicleName() {
+<span class="nc" id="L44">        return vehicleName;</span>
+    }
+
+    public void setVehicleName(String vehicleName) {
+<span class="nc" id="L48">        this.vehicleName = vehicleName;</span>
+<span class="nc" id="L49">    }</span>
+
+    public double getGas() {
+<span class="nc" id="L52">        return gas;</span>
+    }
+
+    public void setGas(double gas) {
+<span class="nc" id="L56">        this.gas = gas;</span>
+<span class="nc" id="L57">    }</span>
+
+    public double getGasConsumption() {
+<span class="nc" id="L60">        return gasConsumption;</span>
+    }
+
+    public void setGasConsumption(double gasConsumption) {
+<span class="nc" id="L64">        this.gasConsumption = gasConsumption;</span>
+<span class="nc" id="L65">    }</span>
+
+    public int getNo_Wheels() {
+<span class="nc" id="L68">        return no_Wheels;</span>
+    }
+
+    public void setNo_Wheels(int no_Wheels) {
+<span class="nc" id="L72">        this.no_Wheels = no_Wheels;</span>
+<span class="nc" id="L73">    }</span>
 
 
     

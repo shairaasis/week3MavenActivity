@@ -11,6 +11,25 @@ public class Car extends Vehicle{
 <span class="nc" id="L11">        this.storageCapacity = storageCapacity;</span>
 
 <span class="nc" id="L13">    }</span>
+
+    public Car(String vehicleName, double gas, double gasConsumption, String engineType, int no_Wheels, double storageCapacity){
+<span class="nc" id="L16">        super(vehicleName, gas, gasConsumption, engineType, no_Wheels);</span>
+<span class="nc" id="L17">        this.storageCapacity = storageCapacity;</span>
+
+<span class="nc" id="L19">    }</span>
+
+    public double getStorageCapacity() {
+<span class="nc" id="L22">        return storageCapacity;</span>
+    }
+
+    public void setStorageCapacity(double storageCapacity) {
+<span class="nc" id="L26">        this.storageCapacity = storageCapacity;</span>
+<span class="nc" id="L27">    }</span>
+
+
+
+    
+
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

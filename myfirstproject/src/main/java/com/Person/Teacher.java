@@ -11,12 +11,6 @@ public class Teacher extends Person {
     }
     
 
-    public Teacher(String firstName, String lastName, int age, String degreeLevel, String location, String travel_vehicle){
-        super(firstName, lastName, age, location, travel_vehicle);
-        this.degreeLevel = degreeLevel;
-        
-    }
-
     public Teacher(String firstName, String lastName, int age, String degreeLevel, String location){
         super(firstName, lastName, age, location);
         this.degreeLevel = degreeLevel;

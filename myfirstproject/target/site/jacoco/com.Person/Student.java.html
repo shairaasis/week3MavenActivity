@@ -10,6 +10,23 @@ public class Student extends Person{
         
 <span class="nc" id="L11">    }</span>
 
+
+    public Student(String firstName, String lastName, int age, int year, String location){
+<span class="nc" id="L15">        super(firstName, lastName, age, location);</span>
+<span class="nc" id="L16">        this.year = year;</span>
+<span class="nc" id="L17">        this.travel_vehicle = &quot;No Vehicle&quot;;</span>
+<span class="nc" id="L18">    }</span>
+
+
+
+    public int getYear() {
+<span class="nc" id="L23">        return year;</span>
+    }
+
+    public void setYear(int year) {
+<span class="nc" id="L27">        this.year = year;</span>
+<span class="nc" id="L28">    }</span>
+
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
