@@ -14,6 +14,10 @@ public class Teacher extends Person {
     public Teacher(String firstName, String lastName, int age, String degreeLevel, String location){
         super(firstName, lastName, age, location);
         this.degreeLevel = degreeLevel;
-        this.travel_vehicle = "No Vehicle";
+    }
+
+    public static void displayPerson(String firstName, String lastName, int age, String degreeLevel) {
+        System.out.println("First Name: "+ firstName + " Last Name: " +lastName + " Age: " + age + " Degree Level:  " + degreeLevel);
+        
     }
 }

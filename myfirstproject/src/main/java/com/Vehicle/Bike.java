@@ -18,6 +18,11 @@ public class Bike extends Vehicle{
 
     }
 
+    public static void displayVehicle(String engineType, int no_Wheels, int wheelie_power) {
+        System.out.println("Engine Type :   "+ engineType + "\nNumber of Wheels     : " +no_Wheels +  "\nWheelie Power    : " + wheelie_power +"\n");
+        
+    }
+    
     public int getWheelie_power() {
         return wheelie_power;
     }

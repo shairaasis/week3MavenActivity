@@ -14,10 +14,12 @@ public class Student extends Person{
     public Student(String firstName, String lastName, int age, int year, String location){
         super(firstName, lastName, age, location);
         this.year = year;
-        this.travel_vehicle = "No Vehicle";
     }
 
-
+    public static void displayPerson(String firstName, String lastName, int age, int year) {
+        System.out.println("First Name: "+ firstName + " Last Name: " +lastName + " Age: " + age + " Year:  " + year);
+        
+    }
 
     public int getYear() {
         return year;

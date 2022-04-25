@@ -22,16 +22,6 @@ public class Vehicle {
     }
 
 
-    public static void displayVehicle(String engineType, int no_Wheels, double storageCapacity) {
-        System.out.println("Engine Type : "+ engineType + "\nNumber of Wheels    : " +no_Wheels + "\nStorage Capacity      : " + storageCapacity);
-        
-    }
-
-    public static void displayVehicle(String engineType, int no_Wheels, int wheelie_power) {
-        System.out.println("Engine Type :   "+ engineType + "\nNumber of Wheels     : " +no_Wheels +  "\nWheelie Power    : " + wheelie_power +"\n");
-        
-    }
-
     public String getEngineType() {
         return engineType;
     }

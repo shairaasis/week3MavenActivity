@@ -50,7 +50,7 @@ public class Person {
             System.out.println("Your vehicle " +vehicleName.getVehicleName() + " does not have enough gas.");
 
         }
-        System.out.println("-------------------------------------------------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------------------------\n");
 
     }
 
@@ -69,16 +69,6 @@ public class Person {
 
     public static void displayPerson(String firstName, String lastName, int age) {
         System.out.println("First Name: "+ firstName + " Last Name: " +lastName + " Age: " + age);
-        
-    }
-
-    public static void displayPerson(String firstName, String lastName, int age, int year) {
-        System.out.println("First Name: "+ firstName + " Last Name: " +lastName + " Age: " + age + " Year:  " + year);
-        
-    }
-
-    public static void displayPerson(String firstName, String lastName, int age, String degreeLevel) {
-        System.out.println("First Name: "+ firstName + " Last Name: " +lastName + " Age: " + age + " Degree Level:  " + degreeLevel);
         
     }
 

@@ -21,7 +21,7 @@ public final class App {
         do{
         System.out.println("\n\n--------------------------------------------------------------------");
         System.out.println("What would you like to do?");
-        System.out.println("0.Exit      1.Display persons       2.Display vehicles");
+        System.out.println("0.Activity 2      1.Display persons       2.Display vehicles");
         choice = sc.nextInt();
         sc.nextLine();
 
@@ -54,7 +54,7 @@ public final class App {
     System.out.println("\n\n--END OF ACTIVITY 1--");
 
 
-     
+    
         //Activity 2
         System.out.println("\n--------------------------------------------------------------------------------------------------------------------");
         System.out.println("\n--Activity 2--");
