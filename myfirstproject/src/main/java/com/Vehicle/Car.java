@@ -11,5 +11,24 @@ public class Car extends Vehicle{
         this.storageCapacity = storageCapacity;
 
     }
+
+    public Car(String vehicleName, double gas, double gasConsumption, String engineType, int no_Wheels, double storageCapacity){
+        super(vehicleName, gas, gasConsumption, engineType, no_Wheels);
+        this.storageCapacity = storageCapacity;
+
+    }
+
+    public double getStorageCapacity() {
+        return storageCapacity;
+    }
+
+    public void setStorageCapacity(double storageCapacity) {
+        this.storageCapacity = storageCapacity;
+    }
+
+
+
+    
+
     
 }

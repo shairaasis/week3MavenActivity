@@ -15,6 +15,7 @@ public final class App {
      */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        
         int choice;
         
         do{
@@ -30,10 +31,10 @@ public final class App {
         Person.displayPerson("Shaira", "Asis", 22);
 
         System.out.println("\n--Student--");
-        Student.displayPerson("Shaira", "Asis", 22, 4);
+        Student.displayPerson("Jaya", "Jones", 24, 4);
 
         System.out.println("\n--Teacher--");
-        Teacher.displayPerson("Shaira", "Asis", 22, "Bachelor's");
+        Teacher.displayPerson("Jane", "Doe", 40, "Master's");
 
         }
 
@@ -50,8 +51,29 @@ public final class App {
     }
 
     while(choice==1 || choice==2);
-    System.out.println("\n\n--END OF PROGRAM--");
-       
+    System.out.println("\n\n--END OF ACTIVITY 1--");
+
+
+     
+        //Activity 2
+        System.out.println("\n--------------------------------------------------------------------------------------------------------------------");
+        System.out.println("\n--Activity 2--");
+        Car car1 = new Car("Ford Ranger", 50, 10, "4 Stroke Engine", 4, 35.5);
+        Bike bike1 = new Bike("Ducati", 15, 5.5, "V-twin four-stroke", 2, 80);
+ 
+ 
+        Student student1 = new Student("Shaira", "Asis", 22, 4, "Tacloban", car1.getVehicleName());
+
+        Student student2 = new Student("Jaya", "Jones", 12, 1, "Palo", bike1.getVehicleName());
+
+        Student student3 = new Student("Student", "Person", 25, 2, "Cebu");
+
+        Teacher teacher1 = new Teacher("Teacher", "Person", 40, "Master's", "Leyte", bike1.getVehicleName());
+
+        student1.travel(car1);
+        student2.travel(bike1);
+        student3.travel();
+        teacher1.travel(bike1);
 
         sc.close();
 
